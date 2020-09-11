@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TabBarViewController.swift
 //  DYLiveStream
 //
 //  Created by 老刁 on 2020/9/10.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
+    @IBOutlet weak var TabBarController: UITabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
+    
 }
-

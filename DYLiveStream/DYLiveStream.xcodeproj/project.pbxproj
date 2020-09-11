@@ -8,24 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		AD5B17B2250A4EB0001E039B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17B1250A4EB0001E039B /* AppDelegate.swift */; };
-		AD5B17B4250A4EB0001E039B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17B3250A4EB0001E039B /* SceneDelegate.swift */; };
-		AD5B17B6250A4EB0001E039B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17B5250A4EB0001E039B /* ViewController.swift */; };
 		AD5B17B9250A4EB0001E039B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B17B7250A4EB0001E039B /* Main.storyboard */; };
 		AD5B17BC250A4EB0001E039B /* DYLiveStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17BA250A4EB0001E039B /* DYLiveStream.xcdatamodeld */; };
 		AD5B17BE250A4EB2001E039B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5B17BD250A4EB2001E039B /* Assets.xcassets */; };
 		AD5B17C1250A4EB2001E039B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B17BF250A4EB2001E039B /* LaunchScreen.storyboard */; };
+		AD5B17D1250A590F001E039B /* MainiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17D0250A590F001E039B /* MainiewController.swift */; };
+		AD5B17D3250A5C11001E039B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17D2250A5C11001E039B /* NavigationViewController.swift */; };
+		AD5B17FE250A664C001E039B /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B17FD250A664C001E039B /* Live.storyboard */; };
+		AD5B1805250A6A09001E039B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B1803250A6A09001E039B /* Home.storyboard */; };
+		AD5B1806250A6A09001E039B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1804250A6A09001E039B /* HomeViewController.swift */; };
+		AD5B180E250B06B4001E039B /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B180D250B06B4001E039B /* LiveViewController.swift */; };
+		AD5B1812250B159C001E039B /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1811250B159C001E039B /* UIBarButtonItem+Extension.swift */; };
+		AD5B1814250B2EE1001E039B /* MainContentPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1813250B2EE1001E039B /* MainContentPageView.swift */; };
+		AD5B1816250B3048001E039B /* MainContentTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1815250B3048001E039B /* MainContentTitleView.swift */; };
+		AD5B1818250B37DA001E039B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B1817250B37DA001E039B /* Common.swift */; };
+		AD6375E1250B63290045FCEB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6375E0250B63290045FCEB /* UIColor+Extension.swift */; };
+		AD9A6F02250BAF7500EFD488 /* MainContentTitleViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A6F01250BAF7500EFD488 /* MainContentTitleViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD5B17AE250A4EB0001E039B /* DYLiveStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLiveStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B17B1250A4EB0001E039B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD5B17B3250A4EB0001E039B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD5B17B5250A4EB0001E039B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD5B17B8250A4EB0001E039B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5B17BB250A4EB0001E039B /* DYLiveStream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DYLiveStream.xcdatamodel; sourceTree = "<group>"; };
 		AD5B17BD250A4EB2001E039B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD5B17C0250A4EB2001E039B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5B17C2250A4EB2001E039B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD5B17D0250A590F001E039B /* MainiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainiewController.swift; sourceTree = "<group>"; };
+		AD5B17D2250A5C11001E039B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		AD5B17FD250A664C001E039B /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		AD5B1803250A6A09001E039B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		AD5B1804250A6A09001E039B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
+		AD5B180D250B06B4001E039B /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		AD5B1811250B159C001E039B /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		AD5B1813250B2EE1001E039B /* MainContentPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentPageView.swift; sourceTree = "<group>"; };
+		AD5B1815250B3048001E039B /* MainContentTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentTitleView.swift; sourceTree = "<group>"; };
+		AD5B1817250B37DA001E039B /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		AD6375E0250B63290045FCEB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		AD9A6F01250BAF7500EFD488 /* MainContentTitleViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentTitleViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +78,98 @@
 		AD5B17B0250A4EB0001E039B /* DYLiveStream */ = {
 			isa = PBXGroup;
 			children = (
+				AD5B180A250A6B06001E039B /* Main */,
+				AD5B1802250A6A09001E039B /* Home */,
+				AD5B17F9250A6601001E039B /* Live */,
 				AD5B17B1250A4EB0001E039B /* AppDelegate.swift */,
-				AD5B17B3250A4EB0001E039B /* SceneDelegate.swift */,
-				AD5B17B5250A4EB0001E039B /* ViewController.swift */,
-				AD5B17B7250A4EB0001E039B /* Main.storyboard */,
+				AD5B17D2250A5C11001E039B /* NavigationViewController.swift */,
+				AD5B180F250B14B6001E039B /* Tools */,
 				AD5B17BD250A4EB2001E039B /* Assets.xcassets */,
 				AD5B17BF250A4EB2001E039B /* LaunchScreen.storyboard */,
 				AD5B17C2250A4EB2001E039B /* Info.plist */,
 				AD5B17BA250A4EB0001E039B /* DYLiveStream.xcdatamodeld */,
 			);
 			path = DYLiveStream;
+			sourceTree = "<group>";
+		};
+		AD5B17F9250A6601001E039B /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B17FD250A664C001E039B /* Live.storyboard */,
+				AD5B180D250B06B4001E039B /* LiveViewController.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		AD5B1802250A6A09001E039B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1807250A6A5A001E039B /* Controller */,
+				AD5B1808250A6A5A001E039B /* Model */,
+				AD5B1809250A6A5A001E039B /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AD5B1807250A6A5A001E039B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1804250A6A09001E039B /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD5B1808250A6A5A001E039B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD5B1809250A6A5A001E039B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1803250A6A09001E039B /* Home.storyboard */,
+				AD5B1813250B2EE1001E039B /* MainContentPageView.swift */,
+				AD5B1815250B3048001E039B /* MainContentTitleView.swift */,
+				AD9A6F01250BAF7500EFD488 /* MainContentTitleViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD5B180A250A6B06001E039B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B17B7250A4EB0001E039B /* Main.storyboard */,
+				AD5B17D0250A590F001E039B /* MainiewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AD5B180F250B14B6001E039B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1819250B40A1001E039B /* Common */,
+				AD5B1810250B1585001E039B /* Extensions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		AD5B1810250B1585001E039B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1811250B159C001E039B /* UIBarButtonItem+Extension.swift */,
+				AD6375E0250B63290045FCEB /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD5B1819250B40A1001E039B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B1817250B37DA001E039B /* Common.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5B17C1250A4EB2001E039B /* LaunchScreen.storyboard in Resources */,
+				AD5B1805250A6A09001E039B /* Home.storyboard in Resources */,
 				AD5B17BE250A4EB2001E039B /* Assets.xcassets in Resources */,
 				AD5B17B9250A4EB0001E039B /* Main.storyboard in Resources */,
+				AD5B17FE250A664C001E039B /* Live.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +245,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD5B17B6250A4EB0001E039B /* ViewController.swift in Sources */,
+				AD5B1806250A6A09001E039B /* HomeViewController.swift in Sources */,
+				AD5B17D3250A5C11001E039B /* NavigationViewController.swift in Sources */,
 				AD5B17B2250A4EB0001E039B /* AppDelegate.swift in Sources */,
+				AD6375E1250B63290045FCEB /* UIColor+Extension.swift in Sources */,
+				AD5B1812250B159C001E039B /* UIBarButtonItem+Extension.swift in Sources */,
+				AD5B1814250B2EE1001E039B /* MainContentPageView.swift in Sources */,
+				AD5B17D1250A590F001E039B /* MainiewController.swift in Sources */,
+				AD5B180E250B06B4001E039B /* LiveViewController.swift in Sources */,
+				AD5B1816250B3048001E039B /* MainContentTitleView.swift in Sources */,
+				AD9A6F02250BAF7500EFD488 /* MainContentTitleViewDelegate.swift in Sources */,
+				AD5B1818250B37DA001E039B /* Common.swift in Sources */,
 				AD5B17BC250A4EB0001E039B /* DYLiveStream.xcdatamodeld in Sources */,
-				AD5B17B4250A4EB0001E039B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NU2XHN99BA;
 				INFOPLIST_FILE = DYLiveStream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +411,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dk-games.DYLiveStream";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NU2XHN99BA;
 				INFOPLIST_FILE = DYLiveStream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dk-games.DYLiveStream";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

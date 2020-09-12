@@ -24,7 +24,10 @@ class HomeViewController: UIViewController {
 
         var childVC : [UIViewController] = [UIViewController]()
 
-        for _ in 0..<4 {
+        let vc = RecommendPageViewController()
+        
+        childVC.append(vc)
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVC.append(vc)
@@ -32,7 +35,7 @@ class HomeViewController: UIViewController {
         
         let pageViewY = DK.kStatusBarHeight + (navigationBarHeight ?? 0) + DK.kPageTitleViewHeight
         let pageViewH = (self?.view.frame.height)! - pageViewY
-        let pageView = MainContentPageView(frame: CGRect(x: 0, y: DK.kPageTitleViewHeight, width: DK.kScreenWidth, height: pageViewH), childVC: childVC, parentVC:self)
+        let pageView = MainContentPageView(frame: CGRect(x: 0, y: DK.kPageTitleViewHeight, width: DK.kScreenWidth, height: pageViewH) , childVC: childVC, parentVC:self)
         return pageView
 
     }()
@@ -88,15 +91,23 @@ extension HomeViewController {
     private func setUpPageView() {
          
         view.addSubview(mainContentPageView)
+        mainContentPageView.delegate = self
 //        mainContentPageView.backgroundColor = .systemPink
         
     }
 }
 
-
+//MARK:- 代理扩展:MainContentTitleViewDelegate
 extension HomeViewController : MainContentTitleViewDelegate {
     func pageTitleView(_ titleView: MainContentTitleView, _ index: Int) {
         mainContentPageView.setCurrentCollectionIndex(index)
+    }
+    
+}
+//MARK:- 代理扩展:MainContentTitleViewDelegate
+extension HomeViewController : MainContentPageViewDelegate {
+    func pageContentView(_ titleView: MainContentPageView, _ index: Int) {
+        mainContentTitleView.setCurrentScrollIndex(index)
     }
     
 }

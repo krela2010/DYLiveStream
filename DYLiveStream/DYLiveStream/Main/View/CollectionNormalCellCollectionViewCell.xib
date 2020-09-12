@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNormalCellCollectionViewCell" customModule="DYLiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="271" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="271" height="161"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="v6D-dw-8Jw">
+                        <rect key="frame" x="0.0" y="132.5" width="25" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="gGr-Nd-80c"/>
+                            <constraint firstAttribute="width" constant="25" id="kva-Bg-gDC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播直播信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otN-gz-ftH">
+                        <rect key="frame" x="30" y="131" width="104" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="104" id="MYi-R2-o6H"/>
+                            <constraint firstAttribute="height" constant="25" id="TU4-w2-138"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchBarItem" translatesAutoresizingMaskIntoConstraints="NO" id="RGv-F2-g5h">
+                        <rect key="frame" x="0.0" y="0.0" width="271" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="140" id="AeH-V6-UeF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khp-Ol-GHA">
+                        <rect key="frame" x="5" y="110" width="69.5" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69.5" id="e8y-JZ-e9E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmk-9T-TRA">
+                        <rect key="frame" x="150" y="110" width="116" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="LeR-ed-U7f"/>
+                            <constraint firstAttribute="width" constant="116" id="v5V-5C-8AQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="观看人数" image="person.crop.circle" catalog="system">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="v6D-dw-8Jw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3HC-K0-hBg"/>
+                <constraint firstItem="qmk-9T-TRA" firstAttribute="top" secondItem="khp-Ol-GHA" secondAttribute="top" id="5CY-7Z-8nn"/>
+                <constraint firstItem="otN-gz-ftH" firstAttribute="bottom" secondItem="v6D-dw-8Jw" secondAttribute="bottom" id="9dy-C8-uWr"/>
+                <constraint firstItem="otN-gz-ftH" firstAttribute="leading" secondItem="v6D-dw-8Jw" secondAttribute="trailing" constant="5" id="TNl-ek-oZx"/>
+                <constraint firstItem="qmk-9T-TRA" firstAttribute="bottom" secondItem="RGv-F2-g5h" secondAttribute="bottom" constant="-5" id="aps-od-FMF"/>
+                <constraint firstItem="otN-gz-ftH" firstAttribute="top" secondItem="v6D-dw-8Jw" secondAttribute="top" id="d80-Jh-a1u"/>
+                <constraint firstAttribute="bottom" secondItem="v6D-dw-8Jw" secondAttribute="bottom" constant="5" id="g0p-4w-sLy"/>
+                <constraint firstItem="RGv-F2-g5h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ndH-hD-hgQ"/>
+                <constraint firstItem="qmk-9T-TRA" firstAttribute="trailing" secondItem="RGv-F2-g5h" secondAttribute="trailing" constant="-5" id="pHw-io-rQk"/>
+                <constraint firstItem="RGv-F2-g5h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="r1O-da-DBf"/>
+                <constraint firstItem="khp-Ol-GHA" firstAttribute="bottom" secondItem="RGv-F2-g5h" secondAttribute="bottom" constant="-5" id="vrg-Oo-vih"/>
+                <constraint firstAttribute="trailing" secondItem="RGv-F2-g5h" secondAttribute="trailing" id="wUW-hW-EfP"/>
+                <constraint firstItem="khp-Ol-GHA" firstAttribute="leading" secondItem="RGv-F2-g5h" secondAttribute="leading" constant="5" id="yXc-jr-Zd2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="271" height="161"/>
+            <point key="canvasLocation" x="290.57971014492756" y="159.70982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="searchBarItem" width="20" height="20"/>
+    </resources>
+</document>

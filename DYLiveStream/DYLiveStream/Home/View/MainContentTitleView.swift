@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//static con
+
 //创建主页面标题栏
 fileprivate let kScrollViewHeight = 3
 
@@ -25,11 +25,10 @@ class MainContentTitleView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.bounces = false
         scrollView.frame = frame
-        
         return scrollView
     }()
     
-    /// 滚动状态条
+    //滚动状态条
     private lazy var scrollLine : UIView = {
         return UIView()
     }()
@@ -118,6 +117,18 @@ extension MainContentTitleView {
         }
         
         delegate?.pageTitleView?(self, currentLabelIndex)
+        
+    }
+}
+
+
+//MARK:-  外部接口
+extension MainContentTitleView {
+    public func setCurrentScrollIndex(_ index:Int) {
+        let offSet = CGFloat(index) * scrollLine.bounds.width
+        UIView.animate(withDuration: 0.1) {
+            self.scrollLine.frame.origin.x = offSet
+        }
         
     }
 }

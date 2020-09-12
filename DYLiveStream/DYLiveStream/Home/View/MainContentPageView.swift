@@ -8,14 +8,14 @@
 
 import UIKit
 
-private let cellID = "ReuseCollectionViewCell"
+private let kCellID = "ReuseableCollectionViewCell"
 
 class MainContentPageView: UIView {
     
     private var childVC : [UIViewController]
     private weak var parentVC : UIViewController?
-    
-    
+    private var scrollDragBeginX : CGFloat = 0.0
+    weak var delegate : MainContentPageViewDelegate?
     init(frame: CGRect, childVC:[UIViewController], parentVC:UIViewController?) {
         self.childVC = childVC
         self.parentVC = parentVC
@@ -52,7 +52,7 @@ class MainContentPageView: UIView {
 
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCellID)
         return collectionView
     }()
 
@@ -73,7 +73,7 @@ extension MainContentPageView {
     private func setUpVC() {
         
         for vc in childVC {
-            parentVC?.addC
+            parentVC?.addChild(vc)
         }
         
     }
@@ -86,7 +86,7 @@ extension MainContentPageView : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellID, for: indexPath)
 
         let vc = childVC[indexPath.row]
         vc.view.frame = bounds
@@ -98,9 +98,31 @@ extension MainContentPageView : UICollectionViewDataSource {
 }
 
 extension MainContentPageView : UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        scrollDragBeginX = scrollView.contentOffset.x
+        print(scrollDragBeginX)
+    }
+//    scroll
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        scrollView.contentOffset
+//        scrollView.contentOffset
+//        print(scrollView.contentOffset.x)
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        print(scrollView.contentOffset.x)
+    }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
+        
+        let currentScrollX = scrollView.contentOffset.x
+        let contentIndex = Int(currentScrollX / scrollView.frame.width)
+        delegate?.pageContentView?(self, contentIndex)
+        
+//        scrollView.pag
+    }
 }
-
+//MARK:-  外部接口
 extension MainContentPageView {
     public func setCurrentCollectionIndex(_ index:Int) {
         let offSet = CGFloat(index) * collectionView.bounds.width

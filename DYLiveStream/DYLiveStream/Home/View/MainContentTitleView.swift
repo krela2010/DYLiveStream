@@ -112,7 +112,8 @@ extension MainContentTitleView {
         currentLabelIndex = label.tag
         
         let scrollLineX = CGFloat(currentLabelIndex) * scrollLine.frame.width
-        UIView.animate(withDuration: 0.5) { [unowned self] in
+        #warning("todo 平滑效果")
+        UIView.animate(withDuration: 0.5) {
             self.scrollLine.frame.origin.x = scrollLineX
         }
         

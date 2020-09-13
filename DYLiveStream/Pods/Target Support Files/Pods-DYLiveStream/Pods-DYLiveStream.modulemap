@@ -1,0 +1,6 @@
+framework module Pods_DYLiveStream {
+  umbrella header "Pods-DYLiveStream-umbrella.h"
+
+  export *
+  module * { export * }
+}

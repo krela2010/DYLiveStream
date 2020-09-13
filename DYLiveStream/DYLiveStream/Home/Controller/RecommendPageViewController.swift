@@ -18,6 +18,9 @@ private let kHeaderID = "kHeaderID"
 
 class RecommendPageViewController: UIViewController {
 
+    var columnData : DYColumnData?
+    var roomListData : DYRoomListData?
+    var anchorListData : DYAnchorListData?
     private lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: Int(kCollectionViewItemW), height: Int(kCollectionViewNormalItemH))
@@ -38,7 +41,7 @@ class RecommendPageViewController: UIViewController {
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderID)
         
         
-        collectionView.register(UINib(nibName: "CollectionNormalCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+        collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         
         collectionView.register(UINib(nibName: "CollectionViewBeautyCell", bundle: nil), forCellWithReuseIdentifier: kBeautyCellID)
         
@@ -51,7 +54,8 @@ class RecommendPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        
+        setUpVM()
+//
     }
 
 
@@ -61,6 +65,7 @@ extension RecommendPageViewController {
     private func setUpUI () {
         self.view.addSubview(collectionView)
         collectionView.backgroundColor = .white
+        
     }
 }
 
@@ -71,16 +76,20 @@ extension RecommendPageViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell : UICollectionViewCell!
+//        var cell : UICollectionViewCell!
 
-//        cell.contentView.backgroundColor = .cyan
-        
+        let anchor = anchorListData?.data?[indexPath.row];
         if (indexPath.section == 1) {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautyCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautyCellID, for: indexPath) as! CollectionViewBeautyCell
+//            cell.
+//            cell.info = anchor
+            return cell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionViewNormalCell
+            cell.info = anchor
+            return cell
         }
-        return cell
+//        return cell
     }
     
     
@@ -112,5 +121,32 @@ extension RecommendPageViewController : UICollectionViewDelegateFlowLayout {
             return CGSize(width: kCollectionViewItemW, height: kCollectionViewBeautyItemH)
         }
         return CGSize(width: kCollectionViewItemW, height: kCollectionViewNormalItemH)
+    }
+}
+
+
+//MARK:-  设置viewModel通信
+extension RecommendPageViewController {
+    func setUpVM() {
+
+        
+        let vm = RecommendPageViewModel()
+        vm.columnData?.subscribe({
+            guard let data = $0 else { return }
+          self.columnData = data
+        })
+        
+        vm.roomListData?.subscribe({
+            guard let data = $0 else { return }
+          self.roomListData = data
+        })
+
+        vm.anchorListData?.subscribe({
+            guard let data = $0 else { return }
+          self.anchorListData = data
+          self.collectionView.reloadData()
+        })
+        vm.getRoomListWithCategory("xsl")
+        vm.getAnchorListWithOffset(0)
     }
 }

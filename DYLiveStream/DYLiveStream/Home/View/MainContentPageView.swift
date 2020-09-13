@@ -102,11 +102,9 @@ extension MainContentPageView : UICollectionViewDelegate {
         scrollDragBeginX = scrollView.contentOffset.x
         print(scrollDragBeginX)
     }
-//    scroll
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        scrollView.contentOffset
-//        scrollView.contentOffset
-//        print(scrollView.contentOffset.x)
+
     }
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 //        print(scrollView.contentOffset.x)
@@ -118,8 +116,7 @@ extension MainContentPageView : UICollectionViewDelegate {
         let currentScrollX = scrollView.contentOffset.x
         let contentIndex = Int(currentScrollX / scrollView.frame.width)
         delegate?.pageContentView?(self, contentIndex)
-        
-//        scrollView.pag
+
     }
 }
 //MARK:-  外部接口

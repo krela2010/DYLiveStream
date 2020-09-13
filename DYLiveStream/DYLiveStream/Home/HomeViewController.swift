@@ -11,8 +11,6 @@ import UIKit
 
 
 class HomeViewController: UIViewController {
-
-//    懒加载
     
     /// 获取navigationBar高度
     private lazy var navigationBarHeight = {

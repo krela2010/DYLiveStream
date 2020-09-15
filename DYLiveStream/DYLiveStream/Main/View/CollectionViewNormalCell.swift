@@ -8,9 +8,9 @@
 
 import UIKit
 import Kingfisher
-class CollectionViewNormalCell: UICollectionViewCell {
+class CollectionViewNormalCell: CollectionViewBaseCell {
 
-    @IBOutlet weak var nickNameLabel: UILabel!
+//    @IBOutlet weak var nickNameLabel: UILabel!
     
     @IBOutlet weak var anchorImageView: UIImageView!
     @IBOutlet weak var watchingCountLabel: UIButton!
@@ -18,14 +18,18 @@ class CollectionViewNormalCell: UICollectionViewCell {
     @IBOutlet weak var anchorInfoLabel: UILabel!
     
 
-    var info : DYAnchorData? {
+    override var info : DYAnchorData? {
         didSet{
             guard let info = info else {
                 return
             }
-            nickNameLabel.text = info.nickname
-
+//            nickNameLabel.text = info.nickname
+            super.info = info
+            
             anchorImageView.kf.setImage(with: URL(string: info.vertical_src))
+            watchingCountLabel.titleLabel?.text = "\(info.online)"
+            anchorInfoLabel.text = info.room_name
+            
         }
     }
 }

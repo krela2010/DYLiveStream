@@ -33,7 +33,7 @@ class MainContentPageView: UIView {
         let collectionViewW = frame.width * CGFloat(childVC.count)
         let collectionViewH = frame.height
         let collectionViewLayout = UICollectionViewFlowLayout()
-        //frame.size 和 bounds.size一样
+        
         collectionViewLayout.itemSize = (self?.frame.size ??  CGSize.zero)
         collectionViewLayout.scrollDirection = .horizontal
         collectionViewLayout.minimumInteritemSpacing = 0

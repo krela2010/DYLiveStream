@@ -21,22 +21,21 @@ class RecommendPageViewModel {
 }
 //MARK:-  处理网络请求
 extension RecommendPageViewModel {
-    func getRequest() {
-        NetworkTool.request(.GET, "http://capi.douyucdn.cn/api/v1/getColumnList") { (reponse) in
-            let decoder = JSONDecoder()
-            guard let data = reponse.data else {
-                return
-            }
-
-            do {
-                self.columnData?.value = try decoder.decode(DYColumnData.self, from: data)
-//                print(decodeData.data)
-                
-            }catch{
-                print(error)
-            }
-        }
-    }
+//    func getRequest() {
+//        NetworkTool.request(.GET, "http://capi.douyucdn.cn/api/v1/getColumnList") { (reponse) in
+//            let decoder = JSONDecoder()
+//            guard let data = reponse.data else {
+//                return
+//            }
+//
+//            do {
+//                self.columnData?.value = try decoder.decode(DYColumnData.self, from: data)
+//
+//            }catch{
+//                print(error)
+//            }
+//        }
+//    }
     
     func getRoomListWithCategory(_ category:String) {
         
@@ -68,13 +67,36 @@ extension RecommendPageViewModel {
             
 //            self.anchorListData = Property(decoder)
             self.anchorListData?.value = decoder
-            print(decoder)
+//            print(decoder)
               
           }catch{
               print(error)
           }
       }
     }
+    
+    
+    func getRecommendCycleViewData(completion:@escaping (RecommendCycleViewListData)->()) {
+            
+        NetworkTool.request(.GET, "http://capi.douyucdn.cn/api/v1/slide/") { (reponse) in
+          let decoder = JSONDecoder()
+          guard let data = reponse.data else {
+              return
+          }
+            print(reponse)
+          do {
+            let decoder = try decoder.decode(RecommendCycleViewListData.self, from: data)
+            
+//            self.anchorListData?.value = decoder
+            print(decoder)
+            completion(decoder)
+              
+          }catch{
+              print(error)
+          }
+      }
+    }
+    
 }
 
 //MARK:-  更新View

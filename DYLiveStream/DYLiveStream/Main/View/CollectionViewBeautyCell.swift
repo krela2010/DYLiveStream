@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewBeautyCell: UICollectionViewCell {
+class CollectionViewBeautyCell: CollectionViewBaseCell {
 
 
 

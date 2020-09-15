@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD191168250EE91B00DAD0D8 /* CollectionViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD191167250EE91B00DAD0D8 /* CollectionViewBaseCell.swift */; };
+		AD191174250FAA6800DAD0D8 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD191173250FAA6800DAD0D8 /* RecommendCycleView.swift */; };
+		AD19117C250FB58C00DAD0D8 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD19117B250FB58C00DAD0D8 /* RecommendCycleView.xib */; };
+		AD19117F25105F4300DAD0D8 /* CollectionViewCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19117D25105F4300DAD0D8 /* CollectionViewCycleCell.swift */; };
+		AD19118025105F4300DAD0D8 /* CollectionViewCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD19117E25105F4300DAD0D8 /* CollectionViewCycleCell.xib */; };
 		AD5B17B2250A4EB0001E039B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17B1250A4EB0001E039B /* AppDelegate.swift */; };
 		AD5B17B9250A4EB0001E039B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B17B7250A4EB0001E039B /* Main.storyboard */; };
 		AD5B17BC250A4EB0001E039B /* DYLiveStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17BA250A4EB0001E039B /* DYLiveStream.xcdatamodeld */; };
@@ -43,6 +48,11 @@
 		1F2DE48E381A1DD97E13F8A1 /* Pods-DYLiveStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYLiveStream.release.xcconfig"; path = "Target Support Files/Pods-DYLiveStream/Pods-DYLiveStream.release.xcconfig"; sourceTree = "<group>"; };
 		80BA1B43E0415DD8D2C40543 /* Pods-DYLiveStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYLiveStream.debug.xcconfig"; path = "Target Support Files/Pods-DYLiveStream/Pods-DYLiveStream.debug.xcconfig"; sourceTree = "<group>"; };
 		A655328AD47EBA69158185E8 /* Pods_DYLiveStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYLiveStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD191167250EE91B00DAD0D8 /* CollectionViewBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBaseCell.swift; sourceTree = "<group>"; };
+		AD191173250FAA6800DAD0D8 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
+		AD19117B250FB58C00DAD0D8 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
+		AD19117D25105F4300DAD0D8 /* CollectionViewCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCycleCell.swift; sourceTree = "<group>"; };
+		AD19117E25105F4300DAD0D8 /* CollectionViewCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCycleCell.xib; sourceTree = "<group>"; };
 		AD5B17AE250A4EB0001E039B /* DYLiveStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLiveStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B17B1250A4EB0001E039B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5B17B8250A4EB0001E039B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +187,8 @@
 				AD5B1815250B3048001E039B /* MainContentTitleView.swift */,
 				AD9A6F01250BAF7500EFD488 /* MainContentTitleViewDelegate.swift */,
 				AD9A6F03250BD73200EFD488 /* MainContentPageViewDelegate.swift */,
+				AD19117B250FB58C00DAD0D8 /* RecommendCycleView.xib */,
+				AD191173250FAA6800DAD0D8 /* RecommendCycleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +263,9 @@
 				ADFE79BA250CC2FD00D2524E /* CollectionViewNormalCell.xib */,
 				ADFE79C1250CFFFC00D2524E /* CollectionViewBeautyCell.swift */,
 				ADFE79C2250CFFFC00D2524E /* CollectionViewBeautyCell.xib */,
+				AD191167250EE91B00DAD0D8 /* CollectionViewBaseCell.swift */,
+				AD19117D25105F4300DAD0D8 /* CollectionViewCycleCell.swift */,
+				AD19117E25105F4300DAD0D8 /* CollectionViewCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,8 +357,10 @@
 			files = (
 				AD5B17C1250A4EB2001E039B /* LaunchScreen.storyboard in Resources */,
 				AD5B1805250A6A09001E039B /* Home.storyboard in Resources */,
+				AD19117C250FB58C00DAD0D8 /* RecommendCycleView.xib in Resources */,
 				AD5B17BE250A4EB2001E039B /* Assets.xcassets in Resources */,
 				ADFE79BC250CC2FD00D2524E /* CollectionViewNormalCell.xib in Resources */,
+				AD19118025105F4300DAD0D8 /* CollectionViewCycleCell.xib in Resources */,
 				AD5B17B9250A4EB0001E039B /* Main.storyboard in Resources */,
 				AD5B17FE250A664C001E039B /* Live.storyboard in Resources */,
 				ADFE79C4250CFFFC00D2524E /* CollectionViewBeautyCell.xib in Resources */,
@@ -407,12 +424,15 @@
 				ADFE79BB250CC2FD00D2524E /* CollectionViewNormalCell.swift in Sources */,
 				AD5B17B2250A4EB0001E039B /* AppDelegate.swift in Sources */,
 				AD6375E1250B63290045FCEB /* UIColor+Extension.swift in Sources */,
+				AD191174250FAA6800DAD0D8 /* RecommendCycleView.swift in Sources */,
 				ADFE79C3250CFFFC00D2524E /* CollectionViewBeautyCell.swift in Sources */,
 				ADFE79C7250D824500D2524E /* NetworkTool.swift in Sources */,
+				AD191168250EE91B00DAD0D8 /* CollectionViewBaseCell.swift in Sources */,
 				AD5B1812250B159C001E039B /* UIBarButtonItem+Extension.swift in Sources */,
 				ADFE79B7250CB0C200D2524E /* CollectionHeaderView.swift in Sources */,
 				AD5B1814250B2EE1001E039B /* MainContentPageView.swift in Sources */,
 				AD5B17D1250A590F001E039B /* MainiewController.swift in Sources */,
+				AD19117F25105F4300DAD0D8 /* CollectionViewCycleCell.swift in Sources */,
 				AD5B180E250B06B4001E039B /* LiveViewController.swift in Sources */,
 				AD5B1816250B3048001E039B /* MainContentTitleView.swift in Sources */,
 				AD9A6F02250BAF7500EFD488 /* MainContentTitleViewDelegate.swift in Sources */,

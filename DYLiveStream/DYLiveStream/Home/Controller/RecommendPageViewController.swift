@@ -11,6 +11,7 @@ import UIKit
 private let kCollectionViewNormalItemH = kCollectionViewItemW - 10
 private let kCollectionViewBeautyItemH = kCollectionViewItemW + 10
 private let kCollectionViewMargin = 10
+private let kCycleViewHeight = 120
 private let kCollectionViewItemW = (DK.kScreenWidth - (10 * 3)) / 2
 private let kNormalCellID = "kNormalCellID"
 private let kBeautyCellID = "kBeautyCellID"
@@ -27,16 +28,15 @@ class RecommendPageViewController: UIViewController {
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .vertical
-        layout.headerReferenceSize = CGSize(width: CGFloat(DK.kScreenWidth),height: 50.0)
+        layout.headerReferenceSize = CGSize(width: CGFloat(DK.kScreenWidth),height: 40.0)
         layout.sectionInset = UIEdgeInsets(top: 0, left: CGFloat(kCollectionViewMargin), bottom: 0, right: CGFloat(kCollectionViewMargin))
         
 //        layout.dele
         let collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: DK.kScreenWidth, height: self.view.frame.height), collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
-//        collectionView.de
-        collectionView.bounces = false
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCellID)
+
+        collectionView.bounces = true
         
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderID)
         
@@ -47,15 +47,29 @@ class RecommendPageViewController: UIViewController {
         
         
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        collectionView.contentInset = UIEdgeInsets(top: CGFloat(kCycleViewHeight), left: 0, bottom: 0, right: 0)
         return collectionView
     }()
     
+    private lazy var recommendCycleView:RecommendCycleView = {
+        let view = RecommendCycleView.recommendCycleView()
+        view.frame = CGRect(x: 0, y: -CGFloat(kCycleViewHeight), width: self.view.bounds.width, height: CGFloat(kCycleViewHeight))
+        view.backgroundColor = .red
+
+        return view
+    }()
+    
+    private lazy var test:UIView = {
+          let view = UIView()
+          view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 30)
+          return view
+      }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         setUpVM()
-//
     }
 
 
@@ -65,6 +79,7 @@ extension RecommendPageViewController {
     private func setUpUI () {
         self.view.addSubview(collectionView)
         collectionView.backgroundColor = .white
+        collectionView.addSubview(recommendCycleView)
         
     }
 }
@@ -148,5 +163,8 @@ extension RecommendPageViewController {
         })
         vm.getRoomListWithCategory("xsl")
         vm.getAnchorListWithOffset(0)
+        vm.getRecommendCycleViewData { [weak self] (data) in
+            self?.recommendCycleView.list = data
+        }
     }
 }

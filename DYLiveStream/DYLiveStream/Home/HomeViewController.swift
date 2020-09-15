@@ -90,7 +90,6 @@ extension HomeViewController {
          
         view.addSubview(mainContentPageView)
         mainContentPageView.delegate = self
-//        mainContentPageView.backgroundColor = .systemPink
         
     }
 }

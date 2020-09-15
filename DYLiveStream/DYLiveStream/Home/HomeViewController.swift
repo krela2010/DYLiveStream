@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         return navigationController?.navigationBar.frame.height
     }()
     /// 创建pageView
-    
+//    viewdid
     private lazy var mainContentPageView:MainContentPageView = { [weak self] in
 
         var childVC : [UIViewController] = [UIViewController]()

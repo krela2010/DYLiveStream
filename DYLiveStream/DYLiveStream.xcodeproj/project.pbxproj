@@ -12,6 +12,7 @@
 		AD19117C250FB58C00DAD0D8 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD19117B250FB58C00DAD0D8 /* RecommendCycleView.xib */; };
 		AD19117F25105F4300DAD0D8 /* CollectionViewCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19117D25105F4300DAD0D8 /* CollectionViewCycleCell.swift */; };
 		AD19118025105F4300DAD0D8 /* CollectionViewCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD19117E25105F4300DAD0D8 /* CollectionViewCycleCell.xib */; };
+		AD1911832510E14E00DAD0D8 /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1911822510E14E00DAD0D8 /* AdView.swift */; };
 		AD5B17B2250A4EB0001E039B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17B1250A4EB0001E039B /* AppDelegate.swift */; };
 		AD5B17B9250A4EB0001E039B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B17B7250A4EB0001E039B /* Main.storyboard */; };
 		AD5B17BC250A4EB0001E039B /* DYLiveStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD5B17BA250A4EB0001E039B /* DYLiveStream.xcdatamodeld */; };
@@ -53,6 +54,7 @@
 		AD19117B250FB58C00DAD0D8 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		AD19117D25105F4300DAD0D8 /* CollectionViewCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCycleCell.swift; sourceTree = "<group>"; };
 		AD19117E25105F4300DAD0D8 /* CollectionViewCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCycleCell.xib; sourceTree = "<group>"; };
+		AD1911822510E14E00DAD0D8 /* AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
 		AD5B17AE250A4EB0001E039B /* DYLiveStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYLiveStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B17B1250A4EB0001E039B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5B17B8250A4EB0001E039B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 				1F2DE48E381A1DD97E13F8A1 /* Pods-DYLiveStream.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD1911812510E12100DAD0D8 /* Advertisement */ = {
+			isa = PBXGroup;
+			children = (
+				AD1911822510E14E00DAD0D8 /* AdView.swift */,
+			);
+			path = Advertisement;
 			sourceTree = "<group>";
 		};
 		AD5B17A5250A4EAF001E039B = {
@@ -206,6 +216,7 @@
 		AD5B180F250B14B6001E039B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				AD1911812510E12100DAD0D8 /* Advertisement */,
 				ADE06F23250E3B2C005AA048 /* Observer */,
 				ADFE79C5250D822C00D2524E /* Network */,
 				AD5B1819250B40A1001E039B /* Common */,
@@ -437,6 +448,7 @@
 				AD5B1816250B3048001E039B /* MainContentTitleView.swift in Sources */,
 				AD9A6F02250BAF7500EFD488 /* MainContentTitleViewDelegate.swift in Sources */,
 				AD5B1818250B37DA001E039B /* Common.swift in Sources */,
+				AD1911832510E14E00DAD0D8 /* AdView.swift in Sources */,
 				AD9A6F04250BD73200EFD488 /* MainContentPageViewDelegate.swift in Sources */,
 				ADE06F21250DF1E8005AA048 /* DYColumnData.swift in Sources */,
 				ADE06F25250E3B66005AA048 /* Observer.swift in Sources */,

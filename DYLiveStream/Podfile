@@ -6,6 +6,7 @@ target 'DYLiveStream' do
   use_frameworks!
 pod 'Alamofire'
 pod 'Kingfisher'
+pod 'MJRefresh'
   # Pods for DYLiveStream
 
 end

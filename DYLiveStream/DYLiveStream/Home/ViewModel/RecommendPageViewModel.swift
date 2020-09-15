@@ -76,24 +76,24 @@ extension RecommendPageViewModel {
     }
     
     
-    func getRecommendCycleViewData(completion:@escaping (RecommendCycleViewListData)->()) {
-            
+    func getRecommendCycleViewData(_ group: DispatchGroup,completion:@escaping (RecommendCycleViewListData)->()) {
+        group.enter()
         NetworkTool.request(.GET, "http://capi.douyucdn.cn/api/v1/slide/") { (reponse) in
           let decoder = JSONDecoder()
           guard let data = reponse.data else {
               return
           }
-            print(reponse)
           do {
             let decoder = try decoder.decode(RecommendCycleViewListData.self, from: data)
             
-//            self.anchorListData?.value = decoder
             print(decoder)
             completion(decoder)
               
           }catch{
               print(error)
+//            completion(decoder)
           }
+        group.leave()
       }
     }
     

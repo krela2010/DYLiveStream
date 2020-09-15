@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MJRefresh
 private let kCollectionViewNormalItemH = kCollectionViewItemW - 10
 private let kCollectionViewBeautyItemH = kCollectionViewItemW + 10
 private let kCollectionViewMargin = 10
@@ -60,16 +60,14 @@ class RecommendPageViewController: UIViewController {
         return view
     }()
     
-    private lazy var test:UIView = {
-          let view = UIView()
-          view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 30)
-          return view
-      }()
     
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         setUpVM()
+        setupRefreshView()
     }
 
 
@@ -80,7 +78,6 @@ extension RecommendPageViewController {
         self.view.addSubview(collectionView)
         collectionView.backgroundColor = .white
         collectionView.addSubview(recommendCycleView)
-        
     }
 }
 
@@ -96,15 +93,13 @@ extension RecommendPageViewController : UICollectionViewDataSource {
         let anchor = anchorListData?.data?[indexPath.row];
         if (indexPath.section == 1) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautyCellID, for: indexPath) as! CollectionViewBeautyCell
-//            cell.
-//            cell.info = anchor
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionViewNormalCell
             cell.info = anchor
             return cell
         }
-//        return cell
+
     }
     
     
@@ -142,9 +137,9 @@ extension RecommendPageViewController : UICollectionViewDelegateFlowLayout {
 
 //MARK:-  设置viewModel通信
 extension RecommendPageViewController {
-    func setUpVM() {
+   @objc func setUpVM() {
 
-        
+    let dispatchGroup = DispatchGroup()
         let vm = RecommendPageViewModel()
         vm.columnData?.subscribe({
             guard let data = $0 else { return }
@@ -156,15 +151,34 @@ extension RecommendPageViewController {
           self.roomListData = data
         })
 
+    
         vm.anchorListData?.subscribe({
             guard let data = $0 else { return }
           self.anchorListData = data
           self.collectionView.reloadData()
         })
+    
         vm.getRoomListWithCategory("xsl")
         vm.getAnchorListWithOffset(0)
-        vm.getRecommendCycleViewData { [weak self] (data) in
+        vm.getRecommendCycleViewData(dispatchGroup) { [weak self] (data) in
             self?.recommendCycleView.list = data
+            
         }
+        
+    dispatchGroup.notify(queue: DispatchQueue.main) {
+        self.collectionView.mj_header?.endRefreshing()
+    }
+    
     }
 }
+//MARK:-  设置刷新
+extension RecommendPageViewController {
+    private func setupRefreshView() {
+            collectionView.mj_header = MJRefreshNormalHeader()
+        guard  let headerHeight = collectionView.mj_header?.frame.height else { return }
+        collectionView.mj_header?.setRefreshingTarget(self, refreshingAction: #selector(setUpVM))
+        collectionView.mj_header?.ignoredScrollViewContentInsetTop = CGFloat(kCycleViewHeight)
+        
+    }
+}
+ 

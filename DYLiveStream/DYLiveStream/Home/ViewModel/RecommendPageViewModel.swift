@@ -86,7 +86,7 @@ extension RecommendPageViewModel {
           do {
             let decoder = try decoder.decode(RecommendCycleViewListData.self, from: data)
             
-            print(decoder)
+//            print(decoder)
             completion(decoder)
               
           }catch{

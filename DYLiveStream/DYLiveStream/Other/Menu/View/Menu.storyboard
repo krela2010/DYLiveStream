@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="SqH-1f-GCq">
+            <objects>
+                <tableViewController storyboardIdentifier="menusb" id="bbq-Dh-uEc" customClass="MenuViewController" customModule="DYLiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T8h-FV-ALR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="AmP-JZ-JQg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎来到斗鱼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbr-LB-A7h">
+                                    <rect key="frame" x="8" y="8" width="170" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="jcE-J1-7cF"/>
+                                        <constraint firstAttribute="width" constant="170" id="vvk-fj-YYT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45j-mE-ove">
+                                    <rect key="frame" x="38" y="52" width="110" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="110" id="Hyq-FW-q5T"/>
+                                        <constraint firstAttribute="height" constant="40" id="PAV-ct-Xlr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="登录/注册">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zz-Wi-3ui">
+                                    <rect key="frame" x="0.0" y="100" width="414" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="5Zz-Wi-3ui" secondAttribute="trailing" id="4Tl-81-gIp"/>
+                                <constraint firstItem="5Zz-Wi-3ui" firstAttribute="leading" secondItem="AmP-JZ-JQg" secondAttribute="leading" id="4fh-Ek-6Gs"/>
+                                <constraint firstItem="45j-mE-ove" firstAttribute="centerX" secondItem="nbr-LB-A7h" secondAttribute="centerX" id="5Ku-Ok-yDu"/>
+                                <constraint firstItem="45j-mE-ove" firstAttribute="top" secondItem="nbr-LB-A7h" secondAttribute="bottom" constant="8" id="702-Cq-bWJ"/>
+                                <constraint firstAttribute="bottom" secondItem="5Zz-Wi-3ui" secondAttribute="bottom" constant="20" id="8R9-pW-gFI"/>
+                                <constraint firstItem="nbr-LB-A7h" firstAttribute="top" secondItem="AmP-JZ-JQg" secondAttribute="top" constant="8" id="IGs-BS-W2o"/>
+                                <constraint firstItem="nbr-LB-A7h" firstAttribute="leading" secondItem="AmP-JZ-JQg" secondAttribute="leading" constant="8" id="Rot-tZ-sHI"/>
+                                <constraint firstItem="5Zz-Wi-3ui" firstAttribute="top" secondItem="45j-mE-ove" secondAttribute="bottom" constant="8" id="wND-7L-4X2"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellID" id="zGe-qL-eeE">
+                                <rect key="frame" x="0.0" y="228" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zGe-qL-eeE" id="HdK-o5-S19">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9I-zA-sKa">
+                                            <rect key="frame" x="126" y="11" width="184" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bbq-Dh-uEc" id="ePv-JR-1h3"/>
+                            <outlet property="delegate" destination="bbq-Dh-uEc" id="qoI-RP-TJm"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="subTitleView" destination="5Zz-Wi-3ui" id="eLr-Iy-4Wv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mip-Ye-Shz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>

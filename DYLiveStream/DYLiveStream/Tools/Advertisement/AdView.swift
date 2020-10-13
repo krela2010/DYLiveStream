@@ -14,7 +14,7 @@ class AdView: UIView {
     var countBtn = UIButton()
     var webURL: String?
     var countTimer: Timer?
-
+//    NS
     var count: Int? {
          didSet {
             RunLoop.main.add(countTimer!, forMode: .common)

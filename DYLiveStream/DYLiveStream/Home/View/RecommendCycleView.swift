@@ -49,8 +49,6 @@ class RecommendCycleView: UIView {
             collectionView.isPagingEnabled = true
             collectionView.collectionViewLayout = layout
             collectionView.bounces = false
-        
- 
             
     }
     
@@ -101,17 +99,12 @@ extension RecommendCycleView :UICollectionViewDelegate {
         pageControl.currentPage = Int(offset / scrollView.frame.width) % size
     }
     
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let offset = scrollView.contentOffset.x + scrollView.frame.width * 0.5
-//    }
     
 }
 //MARK:-  设置timer,自动滚动
 extension RecommendCycleView {
     private func addTimer() {
-//        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] _ in
-//            self?.scrollToNext()
-//        })
+
         timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNext), userInfo: nil, repeats: true)
 //        RunLoop.main
     }

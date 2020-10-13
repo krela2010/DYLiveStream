@@ -15,15 +15,8 @@ class CollectionViewCycleCell: UICollectionViewCell {
     
     var data:Datum? {
         didSet{
- 
-            
             imageView.kf.setImage(with: URL(string: data?.pic_url ?? ""))
             anchorInfoLabel.text = data?.title
         }
     }
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-
 }

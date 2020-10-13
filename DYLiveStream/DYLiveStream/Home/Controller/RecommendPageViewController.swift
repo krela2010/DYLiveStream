@@ -39,7 +39,7 @@ class RecommendPageViewController: UIViewController {
         collectionView.bounces = true
         
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderID)
-        
+
         
         collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         
@@ -55,7 +55,7 @@ class RecommendPageViewController: UIViewController {
     private lazy var recommendCycleView:RecommendCycleView = {
         let view = RecommendCycleView.recommendCycleView()
         view.frame = CGRect(x: 0, y: -CGFloat(kCycleViewHeight), width: self.view.bounds.width, height: CGFloat(kCycleViewHeight))
-        view.backgroundColor = .red
+//        view.backgroundColor = .red
 
         return view
     }()
@@ -84,8 +84,10 @@ extension RecommendPageViewController {
 //MARK:-  代理扩展:UICollectionViewDataSource
 extension RecommendPageViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        20
     }
+    
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        var cell : UICollectionViewCell!
@@ -171,6 +173,7 @@ extension RecommendPageViewController {
     
     }
 }
+
 //MARK:-  设置刷新
 extension RecommendPageViewController {
     private func setupRefreshView() {

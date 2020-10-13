@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchBarItemView" customModule="DYLiveStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSb-Jv-rSP">
+                    <rect key="frame" x="135" y="8" width="210" height="34"/>
+                    <subviews>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  搜索栏                    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul7-UC-R2d">
+                            <rect key="frame" x="25" y="3" width="160" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9t-R3-Q3Q">
+                            <rect key="frame" x="5" y="3" width="20" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="iep-wK-hhH"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="fdj"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2F-7h-bOQ">
+                            <rect key="frame" x="185" y="3" width="20" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="uvM-e6-w9i"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="scan-1"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="f2F-7h-bOQ" firstAttribute="leading" secondItem="Ul7-UC-R2d" secondAttribute="trailing" id="6Xl-AJ-hQt"/>
+                        <constraint firstAttribute="trailing" secondItem="f2F-7h-bOQ" secondAttribute="trailing" constant="5" id="Gd3-uj-Puh"/>
+                        <constraint firstItem="B9t-R3-Q3Q" firstAttribute="leading" secondItem="SSb-Jv-rSP" secondAttribute="leading" constant="5" id="Hkx-zP-G9c"/>
+                        <constraint firstItem="f2F-7h-bOQ" firstAttribute="bottom" secondItem="Ul7-UC-R2d" secondAttribute="bottom" id="YcZ-3Q-jS1"/>
+                        <constraint firstItem="Ul7-UC-R2d" firstAttribute="top" secondItem="SSb-Jv-rSP" secondAttribute="top" constant="3" id="ZB5-es-AX4"/>
+                        <constraint firstAttribute="bottom" secondItem="Ul7-UC-R2d" secondAttribute="bottom" constant="3" id="hZk-Sf-5dB"/>
+                        <constraint firstItem="f2F-7h-bOQ" firstAttribute="top" secondItem="Ul7-UC-R2d" secondAttribute="top" id="k6X-vj-tBR"/>
+                        <constraint firstAttribute="bottom" secondItem="B9t-R3-Q3Q" secondAttribute="bottom" constant="3" id="sTC-S3-wvy"/>
+                        <constraint firstItem="B9t-R3-Q3Q" firstAttribute="top" secondItem="SSb-Jv-rSP" secondAttribute="top" constant="3" id="tIZ-ZD-mv3"/>
+                        <constraint firstItem="Ul7-UC-R2d" firstAttribute="leading" secondItem="B9t-R3-Q3Q" secondAttribute="trailing" id="uCR-yz-UUH"/>
+                        <constraint firstAttribute="width" constant="210" id="uUQ-tK-lK2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SSb-Jv-rSP" secondAttribute="bottom" constant="8" id="RPc-6m-D70"/>
+                <constraint firstItem="SSb-Jv-rSP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="b4T-zL-HEM"/>
+                <constraint firstItem="SSb-Jv-rSP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rql-0h-1kk"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="scanBarView" destination="SSb-Jv-rSP" id="ai7-L7-onI"/>
+                <outlet property="scanButton" destination="f2F-7h-bOQ" id="p4k-mN-BPA"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="368.63839285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fdj" width="16" height="16"/>
+        <image name="scan-1" width="32" height="32"/>
+    </resources>
+</document>

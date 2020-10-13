@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="F5g-WX-z7K" kind="relationship" relationship="viewControllers" id="0p0-Ea-tMz"/>
                         <segue destination="owo-sc-iS8" kind="relationship" relationship="viewControllers" id="ZKg-qK-L8f"/>
+                        <segue destination="XDa-y7-RPT" kind="relationship" relationship="viewControllers" id="qal-am-JSU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wda-Dw-Bw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -29,21 +32,41 @@
         <scene sceneID="U3Y-ju-RvT">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="F5g-WX-z7K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nWd-Mv-R9V"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="plus-mini" id="nWd-Mv-R9V"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvK-70-VJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="443.47826086956525" y="4.6875"/>
         </scene>
+        <!--jijii-->
+        <scene sceneID="E1U-QO-GEL">
+            <objects>
+                <viewController id="XDa-y7-RPT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74F-na-ZwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zcw-fJ-dRI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="jijii" image="plus-mini" id="Hhm-dZ-4zD" userLabel="item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Ss-DvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="4"/>
+        </scene>
         <!--Live-->
         <scene sceneID="SCI-eB-wkX">
             <objects>
                 <viewControllerPlaceholder storyboardName="Live" id="owo-sc-iS8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dgn-1E-uQp"/>
+                    <tabBarItem key="tabBarItem" title="论坛" image="slowmo" catalog="system" id="dgn-1E-uQp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybi-fh-dke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="443.47826086956525" y="652.90178571428567"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus-mini" width="20" height="20"/>
+        <image name="slowmo" catalog="system" width="128" height="122"/>
+    </resources>
 </document>

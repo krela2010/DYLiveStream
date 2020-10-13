@@ -8,11 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--menusb-->
+        <scene sceneID="8XI-ik-1tR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" referencedIdentifier="menusb" id="iPp-za-wTk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0RF-rl-KLw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfl-cm-s69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="-539"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="cqT-mV-7uJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LeM-sY-r2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="GgX-ea-pKV" customClass="HomeViewController" customModule="DYLiveStream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homesb" id="GgX-ea-pKV" customClass="HomeViewController" customModule="DYLiveStream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TBh-fj-s5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,16 +29,19 @@
                         <viewLayoutGuide key="safeArea" id="c9P-rt-WmK"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Ao-WC-diM"/>
+                    <connections>
+                        <segue destination="iPp-za-wTk" kind="show" identifier="goToMenu" id="1d5-ff-Xb1"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeM-sY-r2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353.6231884057972" y="4.6875"/>
         </scene>
-        <!--Item 1-->
+        <!--首页-->
         <scene sceneID="qxq-zy-9J2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z98-88-fEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fjs-nv-GMq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="BpF-CW-bJ0"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="plus-mini" id="BpF-CW-bJ0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="px0-Pu-rAd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -41,8 +53,12 @@
                         <segue destination="GgX-ea-pKV" kind="relationship" relationship="rootViewController" id="kcv-02-DbT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z98-88-fEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="443.47826086956525" y="4.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus-mini" width="20" height="20"/>
+    </resources>
 </document>

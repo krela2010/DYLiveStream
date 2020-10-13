@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild -project 'DYLiveStream/DYLiveStream.xcodeproj' -scheme 'DYLiveStream' -destination 'platform=iOS Simulator,name=iPhone8'
+      run: xcodebuild -project 'DYLiveStream/DYLiveStream.xcodeproj' -scheme TextStyle -destination 'platform=iOS Simulator,name=iPhone8'
     #- name: Run tests
     # run: swift test -v
